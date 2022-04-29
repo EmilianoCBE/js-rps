@@ -5,7 +5,7 @@ const computerPlay = () =>{
 }
 
 const computerSelection = computerPlay()
-const playerSelection = "scissors"
+
 
 const playRound = (playerSelection, computerSelection) =>{
 
@@ -48,13 +48,39 @@ const playRound = (playerSelection, computerSelection) =>{
     }
 }
 
-console.log(playRound(playerSelection, computerSelection))
+// console.log(playRound(playerSelection, computerSelection))
 
 
-const game = playRound => {
-    for(let i =0; i<5; i++){
-        console.log(playRound(playerSelection, computerSelection))
-    }
-}
+// const game = playRound => {
+//     for(let i =0; i<5; i++){
+//         console.log(playRound(playerSelection, computerSelection))
+//     }
+// }
 
-game(playRound)
+// game(playRound)
+
+
+//!    Dom
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', () => {
+    let playerSelection = "rock";
+    console.log(playRound(playerSelection, computerSelection))
+});
+
+const btn2 = document.querySelector('#btn2');
+btn.addEventListener('click', () => {
+    let playerSelection = "paper";
+    console.log(playRound(playerSelection, computerSelection))
+});
+
+const btn3 = document.querySelector('#btn3');
+btn.addEventListener('click', () => {
+    let playerSelection = "scissors";
+    console.log(playRound(playerSelection, computerSelection))
+});
+
+
+// const container = document.querySelector('#container');
+
+// container.textContent = `Puntos jugador:  Puntos computadora:  `
